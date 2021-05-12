@@ -24,6 +24,10 @@ main>.row{
     filter: brightness(0.50);
 }
 
+.dark-filter30:hover, .dark-filter50:hover{
+    filter: brightness(1);
+}
+
 a{
     text-decoration: none;
     color: white;
@@ -41,6 +45,7 @@ nav{
     height: 100%;
     border: 1px solid black;
     padding: 10px 20px;
+    position: relative;
 }
 
 nav .box{
@@ -52,13 +57,19 @@ nav .box{
 }
 
 nav .nav-link{
-    height: 50px;
+    height: 40px;
     width: 70%;
     display: flex;
     align-items: center;
     text-decoration: none;
     color:white ;
     font-weight: 500;
+}
+
+nav .nav-link:hover{
+    border-left: 5px solid #1ed760;
+    margin-left: -15px;
+    padding-left: 10px;
 }
 
 nav .nav-link>img{
@@ -68,7 +79,7 @@ nav .nav-link>img{
 }
 
 nav .playlist{
-    margin:30px 0 20px 0;
+    margin:40px 0 10px 0;
 }
 
 nav .playlist>h3{
@@ -76,11 +87,10 @@ nav .playlist>h3{
 }
 
 .new-playlist{
-    height: 50px;
+    height: 40px;
     display: flex;
     align-content: center;
-    line-height: 50px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .new-playlist>i{
@@ -96,21 +106,31 @@ nav .playlist>h3{
 
 .pl-list{
     overflow-y: auto;
-    height: 90%;
+    
+    
 }
 
 .pl-list>li{
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .scrollable{
     width: 100%;
-    height: 100%;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.nav-foot{
+    position: absolute;
+    bottom: 0;
+    width: 85%;
+
+
 }
 
 .download{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #4d4d4d;
     align-items: center;
     padding: 5px 0;
 }
@@ -154,13 +174,17 @@ nav .playlist>h3{
 .btn-cta{
     min-width: 200px;
     border-radius: 50px;
-    border: 1px solid white;
+    border: 2px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
     margin-right: 40px;
     padding: 0 20px;
+}
+
+.btn-cta:hover{
+    background-color:#1ed760 ;
 }
 
 /* footer */
@@ -179,3 +203,108 @@ footer>.row{
     height: 100%;
     z-index: 3;
 }
+
+footer .box{
+    height: 100%;
+    padding: 20px;
+}
+
+footer .box img,footer .box a{
+    height: 100%;
+    width: 60px;
+}
+
+footer .info-track{
+    margin-left: 15px;
+}
+
+footer .info-track strong{
+    font-size: 16px;
+}
+
+footer .info-track .artist{
+    font-size: 12px;
+    font-weight: 300;
+    display: block;
+    margin-top: 3px;
+}
+
+footer .info-track .artist{
+    
+    min-width: 80px;
+}
+
+footer .actions a{
+    margin-left: 10px;
+    font-size: 25px;
+    width: 30px;
+    
+}
+
+footer .actions a:first-child{
+    margin-left: 80px;
+}
+
+footer .actions a:hover i{
+    font-weight: 800;
+}
+
+.player{
+    max-width: 100%;
+    font-size: 12px;
+    margin: 5px;
+}
+
+.player a:nth-child(even){
+    font-size: 17px;
+}
+
+.player a:nth-child(3){
+    font-size: 30px;
+}
+
+
+
+.bar{
+    height: 4px;
+    background-color: #5a5a5a;
+    position: relative;
+    border-radius: 2px;
+}
+
+.bar .prog{
+    position:absolute;
+    left: 0;
+    background-color: #c1c1c1;
+    width: 30%;
+}
+
+.manopola{
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid rgb(20, 20, 20);
+    transform: translate(50% , -30%);
+}
+
+.bar:hover .manopola{
+    display: block;
+}
+
+.bar:hover .prog{
+    background-color: #1ed760;
+}
+
+footer .dx-side>*{
+    margin: 0 15px;
+}
+
+#volume{
+    max-width: 100px;
+    margin: 0 -5px 0 5px;
+}
+
