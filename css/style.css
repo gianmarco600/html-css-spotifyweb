@@ -221,6 +221,8 @@ nav .playlist>h3{
 
 .categoria a{
     margin-bottom: 0;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .sub{
@@ -233,6 +235,28 @@ nav .playlist>h3{
 
 .categoria:hover .sub{
     display: block;
+}
+
+.content-box{
+    margin: 20px;
+}
+
+.card{
+    margin: 0 20px;
+}
+
+.card img{
+    max-width: 100%;
+}
+
+.card h4{
+    margin: 15px 0 10px 0;
+    text-align: center;
+}
+
+.card span{
+    font-size: 12px;
+    color: #808080;
 }
 
 /* footer */
@@ -362,6 +386,6 @@ footer .dx-side>*{
 
 #volume{
     max-width: 100px;
-    margin: 0 -5px 0 5px;
+    margin: 0 5px 0 5px;
 }
 
