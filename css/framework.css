@@ -80,8 +80,16 @@
             flex-wrap: wrap;
         }
 
+        .no-wrapper-xs{
+            flex-wrap: nowrap;
+        }
+
         .flex-first-xs{
             order: -1;
+        }
+
+        .flex-col{
+            flex-direction: column;
         }
 }
 

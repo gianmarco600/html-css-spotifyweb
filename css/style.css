@@ -16,6 +16,23 @@ main>.row{
     width: 100%;
 }
 
+.dark-filter30{
+    filter: brightness(0.30);
+}
+
+.dark-filter50{
+    filter: brightness(0.50);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style-type:none ;
+}
+
 /* side navbar */
 
 nav{
@@ -23,8 +40,74 @@ nav{
     width: 100%;
     height: 100%;
     border: 1px solid black;
+    padding: 10px 20px;
 }
 
+nav .box{
+    max-width: 60%;
+}
+
+#logo{
+    margin: 10px 20px 30px 0;
+}
+
+nav .nav-link{
+    height: 50px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:white ;
+    font-weight: 500;
+}
+
+nav .nav-link>img{
+    height: 80%;
+    color:#656565 ;
+    margin-right: 10px;
+}
+
+nav .playlist{
+    margin:30px 0 20px 0;
+}
+
+nav .playlist>h3{
+    text-transform: uppercase;
+}
+
+.new-playlist{
+    height: 50px;
+    display: flex;
+    align-content: center;
+    line-height: 50px;
+    margin-top: 10px;
+}
+
+.new-playlist>i{
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.new-playlist>span{
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.pl-list{
+    overflow-y: auto;
+    height: 90%;
+}
+
+.pl-list>li{
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.scrollable{
+    width: 100%;
+    height: 100%;
+}
 /* main body */
 
 .main-box{
@@ -58,9 +141,15 @@ nav{
 
 footer{
     height: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
 }
 
 footer>.row{
     background-color:#282828 ;
     height: 100%;
+    z-index: 3;
 }
