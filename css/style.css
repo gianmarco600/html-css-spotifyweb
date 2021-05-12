@@ -183,6 +183,13 @@ nav .playlist>h3{
     
 }
 
+.top-bar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: calc((100% / 12) * 2);
+}
+
 .btn-cta{
     min-width: 200px;
     border-radius: 50px;
@@ -197,6 +204,35 @@ nav .playlist>h3{
 
 .btn-cta:hover{
     background-color:#1ed760 ;
+}
+
+/* contenuto della pagina principale */
+
+.content{
+    margin-top: 100px;
+}
+
+.categoria{
+    height: 40px;
+    margin: 15px 15px 0 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.categoria a{
+    margin-bottom: 0;
+}
+
+.sub{
+    width: 55%;
+    margin: 5px auto;
+    height: 2px;
+    display: none;
+    background-color: #1ed760;
+}
+
+.categoria:hover .sub{
+    display: block;
 }
 
 /* footer */
