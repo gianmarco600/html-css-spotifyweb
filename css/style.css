@@ -261,6 +261,33 @@ nav .playlist>h3{
     margin: 0 20px;
 }
 
+.card .img-box{
+    width: 100%;
+    position: relative;
+}
+
+.card .img-box .play{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.card .img-box .play i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 80px;
+}
+
+.card:hover .play{
+    display: block;
+}
+
 .card img{
     max-width: 100%;
 }
