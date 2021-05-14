@@ -1,3 +1,5 @@
+/* common */
+
 body{
     font-family: 'Montserrat', sans-serif;
     color:white;
@@ -58,21 +60,87 @@ nav{
     z-index: 2;
     min-height: 480px;
 }
-
 .nav{
-    width: calc((100vw / 12) * 2);
-    min-width: 200px; 
-        
+    width: 230px;
+    flex-shrink: 0;
+    flex-grow: 0;    
 }
+
+
+@media screen and (max-width:576px) {
+    .nav-xs{
+        min-width: none;
+        flex-shrink: 0;
+        flex-grow: 0; 
+        width: 60px;
+    }  
+
+    .side-xs{
+        display: none;
+    }
+    nav{
+        padding-left: 10px;
+    }
+    nav .nav-link:hover{
+        border-left: 5px solid #1ed760;
+        margin-left: 0px;
+        padding-left: 10px;
+    }
+    .xs-variant{
+        flex-basis: 70px;
+        min-width: 70px;
+    }
+}
+
+
 
 .nav .box, nav .box{
     max-width: 60%;
 }
 
-#logo{
-    margin: 10px 20px 30px 0;
-    z-index: 999999;
+#logo-xs{
+        margin: 10px 20px 30px 0;
+        z-index: 999999;
+        display: inline-block;
+        height: 35px;
 }
+
+#logo-xs img{
+    height: 100%;
+}
+
+#logo{
+        display: none;
+}
+
+@media screen and (min-width:576px){
+    #logo-xs{
+        display:none;
+    }
+
+    #logo{
+        margin: 10px 20px 30px 0;
+        z-index: 999999;
+        display: inline-block;
+        height: 50px;
+    }
+
+    #logo img{
+        height: 100%;
+    }
+    .user>i{
+        text-align: center;
+    }
+    .nav-foot{
+        padding: 10px 20px;
+    }
+}
+
+
+    
+
+
+/* voci principai */
 
 nav .nav-link{
     height: 40px;
@@ -86,8 +154,8 @@ nav .nav-link{
 
 nav .nav-link:hover{
     border-left: 5px solid #1ed760;
-    margin-left: -15px;
-    padding-left: 10px;
+    margin-left: -20px;
+    padding-left: 15px;
 }
 
 nav .nav-link>img{
@@ -95,6 +163,8 @@ nav .nav-link>img{
     color:#656565 ;
     margin-right: 10px;
 }
+
+/* playlist */
 
 nav .playlist{
     margin:40px 0 30px 0;
@@ -141,9 +211,11 @@ nav .playlist>h3{
     overflow-y: auto;
 }
 
+/* side nav foot */
+
  .nav-foot{
     background-color: black;
-    padding: 10px 20px;
+    padding: 10px 10px;
     max-height: 111px; 
     flex-shrink: 2;
 } 
@@ -184,6 +256,8 @@ nav .playlist>h3{
     height: 100%;
 }
 
+/* top banner */
+
 .call-to-action{
     height: 100px;
     align-items: center;
@@ -197,9 +271,17 @@ nav .playlist>h3{
     position: fixed;
     top: 0;
     right: 0;
-    left: calc((100% / 12) * 2);
-    min-left:200px;
     z-index: 100;
+}
+
+.top-bar-xs{
+    left: 50px;
+}
+
+@media  screen and (min-width:576px) {
+    .top-bar-xs{
+        left: 220px;
+    }
 }
 
 .btn-cta{
@@ -221,6 +303,10 @@ nav .playlist>h3{
 
 /* contenuto della pagina principale */
 
+#side{
+    max-width: calc(100% - 220px);
+}
+
 .content{
     margin-top: 100px;
     height: calc(100vh - 100px);
@@ -230,11 +316,14 @@ nav .playlist>h3{
     min-height: calc(100vh - 100px);
 }
 
+/* categorie */
+
 .categoria{
     height: 40px;
     margin: 15px 15px 0 15px;
     text-transform: uppercase;
     text-align: center;
+    flex-grow: 1;
 }
 
 .categoria a{
@@ -258,6 +347,10 @@ nav .playlist>h3{
 .content-box{
     margin: 20px;
 }
+
+/* sezioni con card */
+
+
 
 .card{
     margin: 0 10px 30px 10px;
@@ -358,6 +451,8 @@ footer .box img,footer .box a{
     width: 60px;
 }
 
+/* info traccia in riproduzione (sinistra) */
+
 footer .info-track{
     margin-left: 15px;
 }
@@ -366,31 +461,32 @@ footer .info-track strong{
     font-size: 16px;
 }
 
-footer .info-track .artist{
+footer .info-track .info-artist{
     font-size: 12px;
     font-weight: 300;
     display: block;
     margin-top: 3px;
 }
 
-footer .info-track .artist{
-    
-    min-width: 80px;
+footer .info-track .info-artist{
+    min-width: 90px;
 }
 
 footer .actions a{
-    margin-left: 10px;
     font-size: 25px;
     width: 30px;
-    
-}
-
-footer .actions a:first-child{
-    margin-left: 80px;
+    margin-left: 50px;
 }
 
 footer .actions a:hover i{
     font-weight: 800;
+}
+
+#player-int{
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 400px;
 }
 
 .player{
@@ -406,8 +502,6 @@ footer .actions a:hover i{
 .player a:nth-child(3){
     font-size: 30px;
 }
-
-
 
 .bar{
     height: 4px;

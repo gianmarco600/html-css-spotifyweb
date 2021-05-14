@@ -44,6 +44,9 @@
         .col-xs-offset-10 {margin-left: calc((100% / 12) * 10)}
         .col-xs-offset-11 {margin-left: calc((100% / 12) * 11)}
 
+        .no-shrink-xs{
+            flex-shrink: 0;
+        }
 
         .start-xs {
             justify-content: flex-start;
