@@ -593,6 +593,10 @@ footer .dx-side .tool{
     width: 100%;
 }
 
+footer .dx-side .tool a{
+    margin:0 5px;
+}
+
 #volume{
     max-width: 100px;
     margin: 0 20px 0 10px;
