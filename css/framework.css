@@ -94,6 +94,10 @@
         .flex-col{
             flex-direction: column;
         }
+        
+        .flex-col-xs{
+            flex-direction: column;
+        }
 }
 
 
@@ -169,6 +173,10 @@
 
         .flex-first-sm{
             order: -1;
+        }
+
+        .flex-row-sm{
+            flex-direction: row;
         }
 }
 

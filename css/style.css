@@ -465,13 +465,14 @@ footer .box img{
 
 footer .box .img-foot{
     height: 90%;
-    min-width: 54px;
-    width: 20%;
+    width: 54px;
+    
+
 }
 /* info traccia in riproduzione (sinistra) */
 
 footer .info-track{
-    margin-left: 5px;
+    margin-left: 3%;
 }
 
 footer .info-track strong{
@@ -573,6 +574,10 @@ footer .dx-side{
     padding-right: 10%;
 }
 
+footer .dx-side .dx-side-box{
+    width: 80%;
+}
+
 footer .dx-side a {
     height: 10%;
 }
@@ -582,6 +587,10 @@ footer .dx-side .vol a{
 
 footer .dx-side>div>*{
     margin: 0 5px;
+}
+
+footer .dx-side .tool{
+    width: 100%;
 }
 
 #volume{
