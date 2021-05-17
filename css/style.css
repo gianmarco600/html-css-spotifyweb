@@ -280,7 +280,7 @@ nav .playlist>h3{
 
 @media  screen and (min-width:576px) {
     .top-bar-xs{
-        left: 220px;
+        left: 230px;
     }
 }
 
@@ -292,7 +292,7 @@ nav .playlist>h3{
     align-items: center;
     justify-content: center;
     height: 50px;
-    margin-right: 40px;
+    margin:0 40px;
     padding: 0 20px;
 
 }
@@ -324,12 +324,15 @@ nav .playlist>h3{
     text-transform: uppercase;
     text-align: center;
     flex-grow: 1;
+    flex-shrink: 0;
+    min-width: 140px;
 }
 
 .categoria a{
     margin-bottom: 0;
     font-weight: 600;
     font-size: 16px;
+    min-width: 100px;
 }
 
 .sub{
@@ -460,14 +463,15 @@ footer .box img{
     height: 100%;
 }
 
-footer .box a{
-    width: 60px;
+footer .box .img-foot{
     height: 90%;
+    min-width: 54px;
+    width: 20%;
 }
 /* info traccia in riproduzione (sinistra) */
 
 footer .info-track{
-    margin-left: 2%;
+    margin-left: 5px;
 }
 
 footer .info-track strong{
@@ -496,15 +500,20 @@ footer .actions a:hover i{
 }
 
 #player-int{
-    flex-basis: 100px;
+    min-width: 175px;
     flex-grow: 1;
-    flex-shrink: 1;
+    flex-shrink: 0;
+    justify-self: center;
 }
 
 .player{
     max-width: 100%;
     font-size: 12px;
     margin: 5px;
+}
+
+.player a{
+    margin: 0 2%;
 }
 
 .player a:nth-child(even){
@@ -564,9 +573,11 @@ footer .dx-side{
     padding-right: 10%;
 }
 
-footer .dx-side a ,footer .dx-side>.vol{
-    height: 16px;
-    width: 15px;
+footer .dx-side a {
+    height: 10%;
+}
+footer .dx-side .vol a{
+    height: 100%;
 }
 
 footer .dx-side>div>*{
@@ -575,10 +586,11 @@ footer .dx-side>div>*{
 
 #volume{
     max-width: 100px;
-    margin: 0 5px 0 10px;
+    margin: 0 20px 0 10px;
 }
 
 #volume .bar{
     min-width: 60px;
 }
+
 
