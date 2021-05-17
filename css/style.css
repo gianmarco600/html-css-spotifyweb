@@ -63,7 +63,7 @@ nav{
 .nav{
     width: 230px;
     flex-shrink: 0;
-    flex-grow: 0;    
+    flex-grow: 0;
 }
 
 
@@ -71,9 +71,9 @@ nav{
     .nav-xs{
         min-width: none;
         flex-shrink: 0;
-        flex-grow: 0; 
+        flex-grow: 0;
         width: 60px;
-    }  
+    }
 
     .side-xs{
         display: none;
@@ -137,7 +137,7 @@ nav{
 }
 
 
-    
+
 
 
 /* voci principai */
@@ -216,9 +216,9 @@ nav .playlist>h3{
  .nav-foot{
     background-color: black;
     padding: 10px 10px;
-    max-height: 111px; 
+    max-height: 111px;
     flex-shrink: 2;
-} 
+}
 
 .download{
     border-bottom: 1px solid #4d4d4d;
@@ -294,7 +294,7 @@ nav .playlist>h3{
     height: 50px;
     margin-right: 40px;
     padding: 0 20px;
-    
+
 }
 
 .btn-cta:hover{
@@ -333,7 +333,7 @@ nav .playlist>h3{
 }
 
 .sub{
-    width: 55%;
+    width: 25%;
     margin: 5px auto;
     height: 2px;
     display: none;
@@ -388,7 +388,7 @@ nav .playlist>h3{
     left: 50%;
     top: 50%;
     transform: translate(-50% , -50%);
-    
+
 }
 
 .img-box:hover .play{
@@ -426,6 +426,16 @@ h6{
 
 /* footer */
 
+@media  screen and (min-width:576) {
+    footer .info-track strong {
+        font-size: 16px;
+    }
+    footer .info-track .info-artist{
+        font-size: 10px;
+    }
+}
+
+
 footer{
     height: 100px;
     position: fixed;
@@ -446,19 +456,22 @@ footer .box{
     padding: 20px;
 }
 
-footer .box img,footer .box a{
+footer .box img{
     height: 100%;
-    width: 60px;
 }
 
+footer .box a{
+    width: 60px;
+    height: 90%;
+}
 /* info traccia in riproduzione (sinistra) */
 
 footer .info-track{
-    margin-left: 15px;
+    margin-left: 2%;
 }
 
 footer .info-track strong{
-    font-size: 16px;
+    font-size: 12px;
 }
 
 footer .info-track .info-artist{
@@ -469,13 +482,13 @@ footer .info-track .info-artist{
 }
 
 footer .info-track .info-artist{
-    min-width: 90px;
+    max-width: 90px; 
 }
 
 footer .actions a{
     font-size: 25px;
     width: 30px;
-    margin-left: 50px;
+    margin-left: 50%;
 }
 
 footer .actions a:hover i{
@@ -483,10 +496,9 @@ footer .actions a:hover i{
 }
 
 #player-int{
-    flex-basis: 200px;
+    flex-basis: 100px;
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: 400px;
 }
 
 .player{
@@ -502,6 +514,12 @@ footer .actions a:hover i{
 .player a:nth-child(3){
     font-size: 30px;
 }
+
+.player span{
+    margin: 0 5px;
+}
+
+
 
 .bar{
     height: 4px;
@@ -541,17 +559,26 @@ footer .actions a:hover i{
     background-color: #1ed760;
 }
 
-footer .dx-side a{
+footer .dx-side{
+    width: 100%;
+    padding-right: 10%;
+}
+
+footer .dx-side a ,footer .dx-side>.vol{
     height: 16px;
     width: 15px;
 }
 
-footer .dx-side>*{
-    margin: 0 15px;
+footer .dx-side>div>*{
+    margin: 0 5px;
 }
 
 #volume{
     max-width: 100px;
-    margin: 0 5px 0 5px;
+    margin: 0 5px 0 10px;
+}
+
+#volume .bar{
+    min-width: 60px;
 }
 
