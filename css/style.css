@@ -301,6 +301,13 @@ nav .playlist>h3{
     background-color:#1ed760 ;
 }
 
+@media screen and (max-height:350px){
+    .top-bar{
+        display: none;
+    }
+    
+}
+
 /* contenuto della pagina principale */
 
 #side{
